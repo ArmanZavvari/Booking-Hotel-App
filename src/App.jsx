@@ -4,6 +4,7 @@ import Header from "./component/Header/Header";
 import LocationList from "./component/LocationList/LocationList";
 import { Route, Routes } from "react-router-dom";
 import AppLayout from "./component/AppLayout/AppLayout";
+import Hotels from "./component/Hotels/Hotels";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LocationList />} />
         <Route path="/hotels" element={<AppLayout />}>
-          <Route index element={<div>Hotels</div>} />
+          <Route index element={<Hotels />} />
           <Route path=":id" element={<div>single Hotel</div>} />
         </Route>
       </Routes>
