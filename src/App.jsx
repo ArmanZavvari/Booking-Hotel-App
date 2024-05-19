@@ -5,19 +5,22 @@ import LocationList from "./component/LocationList/LocationList";
 import { Route, Routes } from "react-router-dom";
 import AppLayout from "./component/AppLayout/AppLayout";
 import Hotels from "./component/Hotels/Hotels";
+import HotelsProvider from "./component/context/HotelsProvider";
 
 function App() {
   return (
     <div>
-      <Toaster />
-      <Header />
-      <Routes>
-        <Route path="/" element={<LocationList />} />
-        <Route path="/hotels" element={<AppLayout />}>
-          <Route index element={<Hotels />} />
-          <Route path=":id" element={<div>single Hotel</div>} />
-        </Route>
-      </Routes>
+      <HotelsProvider>
+        <Toaster />
+        <Header />
+        <Routes>
+          <Route path="/" element={<LocationList />} />
+          <Route path="/hotels" element={<AppLayout />}>
+            <Route index element={<Hotels />} />
+            <Route path=":id" element={<div>single Hotel</div>} />
+          </Route>
+        </Routes>
+      </HotelsProvider>
     </div>
   );
 }
