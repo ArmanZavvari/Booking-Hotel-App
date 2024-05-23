@@ -27,7 +27,7 @@ function authReducer(state, action) {
 const FAKE_USER = {
   name: "Arman",
   email: "user@gmail.com",
-  password: "12345",
+  password: "1234",
 };
 
 export default function AuthProvier({ children }) {

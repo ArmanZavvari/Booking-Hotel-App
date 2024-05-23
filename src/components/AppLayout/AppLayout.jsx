@@ -4,7 +4,7 @@ import { useHotels } from "../context/HotelsProvider";
 
 function AppLayout() {
   const { hotels } = useHotels();
-
+  
   return (
     <div className="appLayout">
       <div className="sidebar">
